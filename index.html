@@ -12,21 +12,21 @@
     <section>
 
         <div>
-            <label for="name">Nome e Cognome</label>
-            <input type="text" id="name">
+            <label for="user">Nome e Cognome</label>
+            <input type="text" id="user">
         </div>
 
         <div>
-            <label for="distance">Quanti kilometri devi percorrere?</label>
+            <label for="distance">Kilometri da percorrere?</label>
             <input type="text" id="distance">
         </div>
 
         <div>
             <label for="age">Fascia d'età</label>
             <select id="age">
-                <option value="minorenne">Minorenne</option>
+                <option value="Minorenne">Minorenne</option>
                 <option value="Standard">Maggiorenne</option>
-                <option value="over">Over 65</option>
+                <option value="Over-65">Over 65</option>
             </select>
         </div>
 
@@ -35,6 +35,34 @@
             <button id="cancel">Annulla</button>
         </div>
         
+    </section>
+
+    <section class="ticket hidden">
+        <h3>DETTAGLIO PASSEGGERI</h3>
+            <div>
+                <div class="user-ticket">
+                    <h5>NOME PASSEGGERO</h5>
+                    <p id="username"></p>
+                </div>
+                <div class="ticket-cont">
+                    <div>
+                        <h6>Offerta</h6>
+                        <p id="offer"></p>
+                    </div>
+                    <div>
+                        <h6>Carrozza</h6>
+                        <p id="cab"></p>
+                    </div>
+                    <div>
+                        <h6>Codice CP</h6>
+                        <p id="code"></p>
+                    </div>
+                    <div>
+                        <h6>Costo biglietto</h6>
+                        <p id="price"></p>
+                    </div>
+                </div>
+            </div>
     </section>
     
 
