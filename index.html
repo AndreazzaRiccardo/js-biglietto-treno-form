@@ -11,58 +11,67 @@
 
     <section>
 
-        <div>
-            <label for="user">Nome e Cognome</label>
-            <input type="text" id="user">
+        <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+        <div class="card">
+            <div class="flex space-around">
+                <div class="form">
+                    <label for="user">Nome e Cognome</label>
+                    <input type="text" id="user">
+                </div>
+
+                <div class="form">
+                    <label for="distance">Kilometri da percorrere</label>
+                    <input type="text" id="distance">
+                </div>
+
+                <div class="form">
+                    <label for="age">Fascia d'età</label>
+                    <select id="age">
+                        <option value="Minorenne">Minorenne</option>
+                        <option value="Standard">Maggiorenne</option>
+                        <option value="Over-65">Over 65</option>
+                    </select>
+                </div>
+            </div>
+            <div class="buttons">
+                <button id="generate">Genera</button>
+                <button id="cancel">Annulla</button>
+            </div>
+
         </div>
 
-        <div>
-            <label for="distance">Kilometri da percorrere?</label>
-            <input type="text" id="distance">
-        </div>
-
-        <div>
-            <label for="age">Fascia d'età</label>
-            <select id="age">
-                <option value="Minorenne">Minorenne</option>
-                <option value="Standard">Maggiorenne</option>
-                <option value="Over-65">Over 65</option>
-            </select>
-        </div>
-
-        <div class="buttons">
-            <button id="generate">Genera</button>
-            <button id="cancel">Annulla</button>
-        </div>
-        
     </section>
 
     <section class="ticket hidden">
-        <h3>DETTAGLIO PASSEGGERI</h3>
-            <div>
-                <div class="user-ticket">
-                    <h5>NOME PASSEGGERO</h5>
-                    <p id="username"></p>
+        
+        <h1>IL TUO BIGLIETTO</h1>
+        <div class="card">
+            <h3>DETTAGLIO PASSEGGERI</h3>
+                <div class="flex ticket-cont">
+                    <div class="user-ticket">
+                        <h5>NOME PASSEGGERO</h5>
+                        <p id="username"></p>
+                    </div>
+                    <div class="ticket-details flex">
+                        <div>
+                            <h6>Offerta</h6>
+                            <p id="offer"></p>
+                        </div>
+                        <div>
+                            <h6>Carrozza</h6>
+                            <p id="cab"></p>
+                        </div>
+                        <div>
+                            <h6>Codice CP</h6>
+                            <p id="code"></p>
+                        </div>
+                        <div>
+                            <h6>Costo biglietto</h6>
+                            <p id="price"></p>
+                        </div>
+                    </div>
                 </div>
-                <div class="ticket-cont">
-                    <div>
-                        <h6>Offerta</h6>
-                        <p id="offer"></p>
-                    </div>
-                    <div>
-                        <h6>Carrozza</h6>
-                        <p id="cab"></p>
-                    </div>
-                    <div>
-                        <h6>Codice CP</h6>
-                        <p id="code"></p>
-                    </div>
-                    <div>
-                        <h6>Costo biglietto</h6>
-                        <p id="price"></p>
-                    </div>
-                </div>
-            </div>
+        </div>
     </section>
     
 

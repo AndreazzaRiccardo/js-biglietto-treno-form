@@ -40,3 +40,9 @@ genBtn.addEventListener("click", function() {
     document.getElementById("cab").innerHTML = cab;
 });
 
+
+const clearBtn = document.getElementById("cancel");
+clearBtn.addEventListener("click", function(){
+    ticket.classList.add("hidden");
+})
+
