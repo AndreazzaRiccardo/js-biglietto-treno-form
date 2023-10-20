@@ -30,13 +30,25 @@ genBtn.addEventListener("click", function(event) {
         distanceElem.value = "";
         userAgeElem.value = "";
         usernameElem.focus();
+        ticket.classList.add("hidden");
     } else {
         ticket.classList.remove("hidden");
     }
 
     document.getElementById("username").innerHTML = username;
-    document.getElementById("offer").innerHTML = userAge;
     document.getElementById("price").innerHTML = `${ticketPrice.toFixed(2)} €`;
+
+    const min = document.getElementById("min");
+    const mag = document.getElementById("magg");
+    const over = document.getElementById("over");
+
+    if(userAge === "minorenne") {
+        document.getElementById("offer").innerHTML = min.textContent;
+    } else if (userAge === "standard") {
+        document.getElementById("offer").innerHTML = mag.textContent;
+    } else if (userAge === "over-65") {
+        document.getElementById("offer").innerHTML = over.textContent;
+    }
 
     let code = Math.round(Math.random() * 9999) + 10000;
     let cab = Math.round(Math.random() * 20) + 1;
