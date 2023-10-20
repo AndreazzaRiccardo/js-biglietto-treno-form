@@ -6,24 +6,29 @@ const userAgeElem = document.getElementById("age");
 const ticket = document.querySelector(".ticket");
 
 const genBtn = document.getElementById("generate")
-genBtn.addEventListener("click", function() {
+genBtn.addEventListener("click", function(event) {
+    event.preventDefault();
     const username = usernameElem.value;
     const distance = parseInt(distanceElem.value);
     const userAge = userAgeElem.value;
-    let ticketPrice = distance * 0.21;
+    const kmPrice = 0.21;
+    const discountMinors = 0.2;
+    const discountOver = 0.4;
+    let ticketPrice = distance * kmPrice;
 
-    if (userAge === "Minorenne") {
-        ticketPrice = ticketPrice - (ticketPrice * 0.2);
-    } else if (userAge === "Standard") {
+    if (userAge === "minorenne") {
+        ticketPrice = ticketPrice - (ticketPrice * discountMinors);
+    } else if (userAge === "standard") {
         ticketPrice = ticketPrice;
-    } else if (userAge === "Over-65") {
-        ticketPrice = ticketPrice - (ticketPrice * 0.4);
+    } else if (userAge === "over-65") {
+        ticketPrice = ticketPrice - (ticketPrice * discountOver);
     }
 
-    if (isNaN(ticketPrice) || username == "") {
+    if ((username == "") || (distance == "") || (userAge == "")) {
         alert("Inserisci dei dati validi");
         usernameElem.value = "";
         distanceElem.value = "";
+        userAgeElem.value = "";
         usernameElem.focus();
     } else {
         ticket.classList.remove("hidden");
@@ -42,7 +47,11 @@ genBtn.addEventListener("click", function() {
 
 
 const clearBtn = document.getElementById("cancel");
-clearBtn.addEventListener("click", function(){
+clearBtn.addEventListener("click", function(event){
+    event.preventDefault();
     ticket.classList.add("hidden");
+    usernameElem.value = "";
+    distanceElem.value = "";
+    userAgeElem.value = "";
 })
 
