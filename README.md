@@ -1,18 +1,20 @@
-### ESERCIZIO
-### Chiedi all'utente quanti kilometri dovrà percorrere e la sua età. Sulla base di queste informazioni calcola il prezzo di un biglietto del treno, considerando che: 
-1. Il prezzo del biglietto è di 0.21€ al km
-2. I minorenni avranno uno sconto del 20%
-3. Gli over 65 avranno uno sconto del 40%
+### EXERCISE
+### Ask the user how many miles he will have to travel and his age. Based on this information, calculate the price of a train ticket, considering that: 
+1. The ticket price is 0.21€ per km
+2. Minors will receive a 20% discount
+3. Persons over 65 will receive a 40% discount
 
-**Raccolta dati**
-1. Chiedere all'utente quanti kilometri deve percorrere;
-2. Chiedere all'utente quanti anni ha;
+**Data collection**
+1. Ask the user how many kilometres he has to travel;
+2. Ask the user how old he is;
 
-**Logica della soluzione**
-1. Moltiplicare i kilometri stimati di percorrenza per il prezzo a kilometro del biglietto;
-2. Eventualmente calcolare uno sconto se l'utente appartiene ad una delle categorie descritte;
-3. Sottrarre dal prezzo totale lo sconto calcolato;
-4. Preparare il messaggio contenente il prezzo finito;
+**Logic of the solution***
+1. Multiply the estimated mileage by the price per kilometre of the ticket;
+2. Where appropriate, calculate a discount if the user belongs to one of the categories described;
+3. Deduct the calculated discount from the total price;
+4. Prepare the message containing the finished price;
 
 **Output**
-Stampare a schermo la tariffa finale applicata all'utente
+Print the final user fee on the screen
+
+![Screenshot 2024-02-08 192125](https://github.com/AndreazzaRiccardo/js-biglietto-treno-form/assets/136316597/5d4d0a58-99de-4a1e-b493-5cfa3c9d6c4a)
